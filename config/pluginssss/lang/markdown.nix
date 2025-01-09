@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, helpers, ... }:
 {
   extraPackages = with pkgs; [
     marksman
@@ -8,6 +8,14 @@
     clipboard-image = {
       enable = true;
       clipboardPackage = pkgs.wl-clipboard;
+    };
+
+    image = {
+      enable = helpers.enableExceptInTests;
+      integrations.markdown = {
+        clearInInsertMode = true;
+        onlyRenderImageAtCursor = true;
+      };
     };
 
     markdown-preview = {

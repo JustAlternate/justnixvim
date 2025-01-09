@@ -1,34 +1,63 @@
 {
   globals.mapleader = " ";
+  globals.maplocalleader = "\\";
 
   keymaps = [
     # Windows
     {
       mode = "n";
-      key = "<C-Up>";
+      key = "<C-k>";
       action = "<C-w>k";
       options.desc = "Move To Window Up";
     }
 
     {
       mode = "n";
-      key = "<C-Down>";
+      key = "<C-j>";
       action = "<C-w>j";
       options.desc = "Move To Window Down";
     }
 
     {
       mode = "n";
-      key = "<C-Left>";
+      key = "<C-h>";
       action = "<C-w>h";
       options.desc = "Move To Window Left";
     }
 
     {
       mode = "n";
-      key = "<C-Right>";
+      key = "<C-l>";
       action = "<C-w>l";
       options.desc = "Move To Window Right";
+    }
+
+    {
+      mode = "n";
+      key = "<C-Up>";
+      action = "<cmd>resize +2<cr>";
+      options.desc = "Increase Window Height";
+    }
+
+    {
+      mode = "n";
+      key = "<C-Down>";
+      action = "<cmd>resize -2<cr>";
+      options.desc = "Decrease Window Height";
+    }
+
+    {
+      mode = "n";
+      key = "<C-Left>";
+      action = "<cmd>vertical resize -2<cr>";
+      options.desc = "Decrease Window Width";
+    }
+
+    {
+      mode = "n";
+      key = "<C-Right>";
+      action = "<cmd>vertical resize +2<cr>";
+      options.desc = "Increase Window Width";
     }
 
     {
@@ -40,6 +69,28 @@
         desc = "Delete window";
       };
     }
+    {
+      mode = "n";
+      key = "<leader>bb";
+      action = "<cmd>e #<cr>";
+      options.desc = "Switch to Other Buffer";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>bd";
+      action = ":lua Snacks.bufdelete()<cr>";
+      options.desc = "Delete Buffer";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>bo";
+      action = ":lua Snacks.bufdelete.other()<cr>";
+      options.desc = "Delete Other Buffers";
+    }
+
+    # Splitting
 
     {
       mode = "n";
@@ -61,16 +112,6 @@
       };
     }
 
-    {
-      mode = "n";
-      key = "<C-s>";
-      action = "<cmd>w<cr><esc>";
-      options = {
-        silent = true;
-        desc = "Save file";
-      };
-    }
-
     # Quit/Session
     {
       mode = "n";
@@ -80,66 +121,6 @@
         silent = true;
         desc = "Quit all";
       };
-    }
-
-    # Toggle options
-    {
-      mode = "n";
-      key = "<leader>ul";
-      action = ":lua ToggleLineNumber()<cr>";
-      options = {
-        silent = true;
-        desc = "Toggle Line Numbers";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>uL";
-      action = ":lua ToggleRelativeLineNumber()<cr>";
-      options = {
-        silent = true;
-        desc = "Toggle Relative Line Numbers";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>uw";
-      action = ":lua ToggleWrap()<cr>";
-      options = {
-        silent = true;
-        desc = "Toggle Line Wrap";
-      };
-    }
-
-    # Move Lines
-    {
-      mode = "n";
-      key = "<A-Up>";
-      action = "<cmd>m .-2<cr>==";
-      options.desc = "Move line up";
-    }
-
-    {
-      mode = "v";
-      key = "<A-Up>";
-      action = ":m '<-2<cr>gv=gv";
-      options.desc = "Move line up";
-    }
-
-    {
-      mode = "n";
-      key = "<A-Down>";
-      action = "<cmd>m .+1<cr>==";
-      options.desc = "Move line down";
-    }
-
-    {
-      mode = "v";
-      key = "<A-Down>";
-      action = ":m '>+1<cr>gv=gv";
-      options.desc = "Move line Down";
     }
 
     # Better indenting
@@ -155,46 +136,12 @@
       action = ">gv";
     }
 
-    {
-      mode = "i";
-      key = "<C-a>";
-      action = "<cmd> norm! ggVG<cr>";
-      options.desc = "Select all lines in buffer";
-    }
-
+    # Redo as U
     {
       mode = "n";
-      key = "J";
-      action = "mzJ`z";
-      options.desc = "Allow cursor to stay in the same place after appending to current line ";
-    }
-
-    # {
-    #   mode = "n";
-    #   key = "<C-d>";
-    #   action = "<C-d>zz";
-    #   options.desc = "Allow C-d and C-u to keep the cursor in the middle";
-    # }
-    #
-    # {
-    #   mode = "n";
-    #   key = "<C-u>";
-    #   action = "<C-u>zz";
-    #   options.desc = "Allow C-d and C-u to keep the cursor in the middle";
-    # }
-
-    {
-      mode = "n";
-      key = "n";
-      action = "nzzzv";
-      options.desc = "Allow search terms to stay in the middle";
-    }
-
-    {
-      mode = "n";
-      key = "N";
-      action = "Nzzzv";
-      options.desc = "Allow search terms to stay in the middle";
+      key = "U";
+      action = "<cmd>redo<cr>";
+      options.desc = "Redo";
     }
 
     # Clear search with ESC
@@ -219,17 +166,6 @@
       options.desc = "Deletes to void register and paste over";
     }
 
-    # Copy stuff to system clipboard with <leader> + y or just y to have it just in vim
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>y";
-      action = "\"+y";
-      options.desc = "Copy to system clipboard";
-    }
-
     # Delete to void register
     {
       mode = [
@@ -240,34 +176,84 @@
       action = "\"_d";
       options.desc = "Delete to void register";
     }
+
+    # Files
+    {
+      mode = "n";
+      key = "<leader>fn";
+      action = "<cmd>enew<cr>";
+      options.desc = "New File";
+    }
+
+    # lazygit
+    {
+      mode = "n";
+      key = "<leader>gg";
+      action = ":lua Snacks.lazygit()<cr>";
+      options.desc = "Lazygit (cwd)";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>gl";
+      action = ":lua Snacks.lazygit.log_file()<cr>";
+      options.desc = "Lazygit Current File History";
+    }
+
+    # Floating Terminal
+    {
+      mode = "n";
+      key = "<leader>t";
+      action = ":lua Snacks.terminal()<cr>";
+      options.desc = "Terminal (cwd)";
+    }
+
+    # Flash
+    {
+      mode = [
+        "n"
+        "x"
+        "o"
+      ];
+      key = "f";
+      action = ":lua require('flash').jump()<cr>";
+      options.desc = "Flash";
+    }
+
+    # Telescope Bindings
+    {
+      mode = "n";
+      key = "<leader>fr";
+      action = "<cmd>Telescope oldfiles<cr>";
+      options.desc = "Telescope Recent Files";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>fg";
+      action = "<cmd>Telescope git_files<cr>";
+      options.desc = "Telescope Git Files";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>ff";
+      action = "<cmd>Telescope find_files<cr>";
+      options.desc = "Telescope Files in Current Directory";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>fb";
+      action = "<cmd>Telescope buffers<cr>";
+      options.desc = "Telescope Buffers";
+    }
+
+    {
+      mode = "n";
+      key = "<leader>sf";
+      action = "<cmd>Telescope live_grep<cr>";
+      options.desc = "Telescope Search Grep in All Files";
+    }
   ];
-  extraConfigLua = ''
-    function ToggleLineNumber()
-    if vim.wo.number then
-      vim.wo.number = false
-    else
-      vim.wo.number = true
-      vim.wo.relativenumber = false
-      end
-    end
-
-    function ToggleRelativeLineNumber()
-    if vim.wo.relativenumber then
-      vim.wo.relativenumber = false
-    else
-      vim.wo.relativenumber = true
-      vim.wo.number = false
-      end
-    end
-
-    function ToggleWrap()
-        vim.wo.wrap = not vim.wo.wrap
-    end
-
-     if vim.lsp.inlay_hint then
-       vim.keymap.set('n', '<leader>uh', function()
-         vim.lsp.inlay_hint(0, nil)
-       end, { desc = 'Toggle Inlay Hints' })
-     end
-  '';
 }

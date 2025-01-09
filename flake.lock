@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "blink-compat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1734896240,
-        "narHash": "sha256-Rrrh+O3FbBnaAnCHwPuQyfhH+XueSkQp6ipEkn6esGY=",
-        "owner": "saghen",
-        "repo": "blink.compat",
-        "rev": "74b251a1e9478c4fa6d7c6bc2921d7124e6f6cbb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "saghen",
-        "repo": "blink.compat",
-        "type": "github"
-      }
-    },
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -209,22 +193,6 @@
         "type": "github"
       }
     },
-    "minty": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1732979777,
-        "narHash": "sha256-U6IxF/i1agIGzcePYg/k388GdemBtA7igBUMwyQ3d3I=",
-        "owner": "NvChad",
-        "repo": "minty",
-        "rev": "6dce9f097667862537823d515a0250ce58faab05",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NvChad",
-        "repo": "minty",
-        "type": "github"
-      }
-    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -326,12 +294,9 @@
     },
     "root": {
       "inputs": {
-        "blink-compat": "blink-compat",
         "flake-utils": "flake-utils",
-        "minty": "minty",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim",
-        "volt": "volt"
+        "nixvim": "nixvim"
       }
     },
     "systems": {
@@ -382,22 +347,6 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "type": "github"
-      }
-    },
-    "volt": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1734172153,
-        "narHash": "sha256-/sYO6nqkehVNcRHx5kaFXJ9BlAVIf8Qi21A4XI9/ymU=",
-        "owner": "NvChad",
-        "repo": "volt",
-        "rev": "0cdfa1dfbbfc8fda340054915991fda188db8d8e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NvChad",
-        "repo": "volt",
         "type": "github"
       }
     }

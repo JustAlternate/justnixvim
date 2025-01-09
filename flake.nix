@@ -4,17 +4,6 @@
   inputs = {
     nixvim.url = "github:nix-community/nixvim";
     flake-utils.url = "github:numtide/flake-utils";
-
-    # color tools
-    minty = {
-      url = "github:NvChad/minty";
-      flake = false;
-    };
-
-    volt = {
-      url = "github:NvChad/volt";
-      flake = false;
-    };
   };
 
   outputs =
