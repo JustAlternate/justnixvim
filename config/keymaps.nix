@@ -69,6 +69,21 @@
         desc = "Delete window";
       };
     }
+    # Buffers
+    {
+      mode = "n";
+      key = "<S-h>";
+      action = "<cmd>bprevious<cr>";
+      options.desc = "Prev Buffer";
+    }
+
+    {
+      mode = "n";
+      key = "<S-l>";
+      action = "<cmd>bnext<cr>";
+      options.desc = "Next Buffer";
+    }
+
     {
       mode = "n";
       key = "<leader>bb";
