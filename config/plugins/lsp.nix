@@ -9,11 +9,6 @@
         "gi" = "implementation";
       };
       servers = {
-        #grammarly.enable = true;
-        #ltex = {
-        #  enable = true;
-        #  settings.language = "fr";
-        #};
         html.enable = true;
         cssls.enable = true;
         java_language_server.enable = true;

@@ -32,11 +32,11 @@
           "text"
         ];
 
-        settings.completionEnabled = true;
+        settings.completionEnabled = false;
 
         extraOptions = {
           checkFrequency = "save";
-          language = "en-GB";
+          language = "fr";
         };
       };
     };
