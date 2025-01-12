@@ -20,5 +20,7 @@
     ./dap.nix
     #./ufo.nix
     ./lang
+    ./treesitter/treesitter.nix
+    ./treesitter/treesitter-textobjects.nix
   ];
 }

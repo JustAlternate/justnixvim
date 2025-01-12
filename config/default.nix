@@ -92,7 +92,6 @@
     spectre.enable = true;
     spectre.replacePackage = pkgs.gnused;
     persistence.enable = true;
-    treesitter.enable = true;
   };
 
 }
