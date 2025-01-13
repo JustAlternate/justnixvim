@@ -75,7 +75,6 @@
   };
 
   plugins = {
-    flash.enable = true;
     trim.enable = true;
     neoscroll.enable = true;
     dressing.enable = true;

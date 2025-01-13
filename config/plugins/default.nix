@@ -8,6 +8,7 @@
     ./dap.nix
     ./dashboard.nix
     ./fidget.nix
+    ./flash.nix
     ./gitsigns.nix
     ./go-nvim.nix
     ./lsp.nix

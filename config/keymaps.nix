@@ -223,18 +223,6 @@
       options.desc = "Terminal (cwd)";
     }
 
-    # Flash
-    {
-      mode = [
-        "n"
-        "x"
-        "o"
-      ];
-      key = "f";
-      action = ":lua require('flash').jump()<cr>";
-      options.desc = "Flash";
-    }
-
     # Telescope Bindings
     {
       mode = "n";
