@@ -1,26 +1,28 @@
 {
   imports = [
-    ./neotree.nix
-    ./noice.nix
-    ./notify.nix
-    ./conform.nix
-    ./mini.nix
-    ./whichkey.nix
-    ./dashboard.nix
-    ./lsp.nix
-    ./luasnip.nix
-    ./cmp.nix
-    ./fidget.nix
-    ./gitsigns.nix
-    ./lspsaga.nix
-    ./trouble.nix
-    ./nui.nix
-    ./precognition.nix
-    ./go-nvim.nix
-    ./dap.nix
-    #./ufo.nix
     ./lang
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix
+    ./cmp.nix
+    ./conform.nix
+    ./dap.nix
+    ./dashboard.nix
+    ./fidget.nix
+    ./gitsigns.nix
+    ./go-nvim.nix
+    ./lsp.nix
+    ./lspkind.nix
+    ./lspsaga.nix
+    ./luasnip.nix
+    ./mini.nix
+    ./neotree.nix
+    ./noice.nix
+    ./notify.nix
+    ./nui.nix
+    #./ollama-copilot.nix
+    ./precognition.nix
+    ./trouble.nix
+    ./ufo.nix
+    ./whichkey.nix
   ];
 }
