@@ -20,25 +20,25 @@
   keymaps = [
     {
       mode = "n";
-      key = "cgt";
+      key = "<leader>cgt";
       action = "<cmd>GoTest<cr>";
       options.desc = "GoTest";
     }
     {
       mode = "n";
-      key = "cgtf";
+      key = "<leader>cgtf";
       action = "<cmd>GoTestFile<cr>";
       options.desc = "GoTest";
     }
     {
       mode = "n";
-      key = "cgtc";
+      key = "<leader>cgtc";
       action = "<cmd>GoTermClose<cr>";
       options.desc = "GoTest";
     }
     {
       mode = "n";
-      key = "cgf";
+      key = "<leader>cgf";
       action = "<cmd>GoFmt<cr>";
       options.desc = "GoTest";
     }
