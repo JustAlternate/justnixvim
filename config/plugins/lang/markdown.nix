@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-  extraPackages = with pkgs; [
-    marksman
-  ];
-
   plugins = {
     clipboard-image = {
       enable = true;
@@ -15,22 +11,21 @@
     };
 
     lsp.servers = {
-      marksman.enable = true;
+      ltex = {
+        enable = true;
+        filetypes = [
+          "markdown"
+          "text"
+        ];
 
-      # ltex = {
-      #   enable = true;
-      #   filetypes = [
-      #     "markdown"
-      #     "text"
-      #   ];
-      #
-      #   settings.completionEnabled = true;
-      #
-      #   extraOptions = {
-      #     checkFrequency = "save";
-      #     language = "fr";
-      #   };
-      # };
+        autostart = false;
+
+        settings = {
+          completionEnabled = true;
+          checkFrequency = "save";
+          language = "auto";
+        };
+      };
     };
 
     lint = {
@@ -43,10 +38,9 @@
     {
       mode = "n";
       key = "<leader>m";
-      action = "<cmd>MarkdownPreviewToggle<cr>";
+      action = "<cmd>MarkdownPreview<cr>";
       options = {
-        silent = true;
-        desc = "Toggle markdown preview";
+        desc = "Markdown preview";
       };
     }
   ];

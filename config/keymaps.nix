@@ -258,5 +258,20 @@
       action = "<cmd>Telescope live_grep<cr>";
       options.desc = "Telescope Search Grep in All Files";
     }
+
+    # Refactoring
+    {
+      mode = "n";
+      key = "<leader>crg";
+      action = "<cmd>lua require('spectre').toggle()<CR>";
+      options.desc = "Spectre replace globaly";
+    }
+    {
+      mode = "n";
+      key = "<leader>crf";
+      action = "<cmd>lua require('spectre').open_file_search()<CR>";
+      options.desc = "Spectre replace in file";
+    }
+
   ];
 }

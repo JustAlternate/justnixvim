@@ -75,13 +75,13 @@
   };
 
   plugins = {
-    trim.enable = true;
+    # trim.enable = true;
     neoscroll.enable = true;
     dressing.enable = true;
     todo-comments.enable = true;
     web-devicons.enable = true;
     lualine.enable = true;
-    toggleterm.enable = true;
+    toggleterm.enable = false;
     snacks.enable = true;
     lazygit.enable = true;
     telescope.enable = true;
@@ -89,8 +89,9 @@
     fzf-lua.enable = true;
     markdown-preview.enable = true;
     spectre.enable = true;
+    #TODO: keybind config for spectre
     spectre.replacePackage = pkgs.gnused;
-    persistence.enable = true;
+    # persistence.enable = true;
   };
 
 }

@@ -6,13 +6,13 @@
       icons = {
         style = "glyph";
       };
-      # comment = {
-      #   options = {
-      #     customCommentString = ''
-      #       <cmd>lua require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo.commentstring<cr>
-      #     '';
-      #   };
-      # };
+      comment = {
+        options = {
+          customCommentString = ''
+            <cmd>lua require("ts_context_commentstring.internal").calculate_commentstring() or vim.bo.commentstring<cr>
+          '';
+        };
+      };
       # Show indent lines
       indentscope = {
         symbol = "│";

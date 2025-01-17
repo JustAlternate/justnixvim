@@ -24,13 +24,7 @@
       g.neovide_transparency = 0.8
 
       -- Neovide Fonts
-      o.guifont = "MonoLisa Trial:Medium:h15"
-      -- o.guifont = "CommitMono:Medium:h15"
-      -- o.guifont = "JetBrainsMono Nerd Font:h14:Medium:i"
-      -- o.guifont = "FiraMono Nerd Font:Medium:h14"
-      -- o.guifont = "CaskaydiaCove Nerd Font:h14:b:i"
-      -- o.guifont = "BlexMono Nerd Font Mono:h14:Medium:i"
-      -- o.guifont = "Liga SFMono Nerd Font:b:h15"
+      o.guifont = "Hack Nerd Font Mono:h14:Medium:i"
     end
   '';
 }
