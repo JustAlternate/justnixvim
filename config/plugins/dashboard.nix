@@ -2,8 +2,10 @@
   plugins.dashboard = {
     enable = true;
     settings = {
+      change_to_vcs_root = true;
       theme = "hyper";
       config = {
+        project.limit = 6;
         center = [ ];
         shortcut = [ ];
         footer = [

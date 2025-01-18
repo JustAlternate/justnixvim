@@ -218,9 +218,15 @@
     # Floating Terminal
     {
       mode = "n";
-      key = "<leader>t";
+      key = "<leader>th";
       action = ":lua Snacks.terminal()<cr>";
-      options.desc = "Terminal (cwd)";
+      options.desc = "Horizontal Terminal (cwd)";
+    }
+    {
+      mode = "n";
+      key = "<leader>tv";
+      action = ":lua Snacks.terminal.open(nil, { win = { position = 'right' }})<cr>";
+      options.desc = "Vertical Terminal (cwd)";
     }
 
     # Telescope Bindings
