@@ -4,31 +4,31 @@
 
 # 🔨 Installation
 
-If you'd like to give it a try before installing: `nix run github:JustAlternate/gonixvim`
+If you'd like to give it a try before installing: `nix run github:JustAlternate/justnixvim`
 
 ### Adding it as a flake
 
-1: Go to the flake.nix and add `gonixvim.url = "github:JustAlternate/gonixvim"` to your inputs.
+1: Go to the flake.nix and add `justnixvim.url = "github:JustAlternate/justnixvim"` to your inputs.
 
 ```nix
 # flake
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    gonixvim.url = "github:JustAlternate/gonixvim";
+    justnixvim.url = "github:JustAlternate/justnixvim";
   };
 }
 ```
 2: Run nix flake update
 
-3: Install it by adding `inputs.gonixvim.packages.${system}.default` to your environment.systemPackages or home.packages. If you're using home-manager.
+3: Install it by adding `inputs.justnixvim.packages.${system}.default` to your environment.systemPackages or home.packages. If you're using home-manager.
 
 ```nix
 # packages
 { inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    inputs.gonixvim.packages.${system}.default
+    inputs.justnixvim.packages.${system}.default
   ];
 }
 ```
