@@ -7,6 +7,7 @@
     reftools
     gotests
   ];
+
   plugins = {
     lsp.servers = {
       gopls.enable = true;

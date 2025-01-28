@@ -6,5 +6,6 @@
     ./python.nix
     ./go.nix
     ./terraform.nix
+    ./scala.nix
   ];
 }
