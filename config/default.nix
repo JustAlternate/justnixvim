@@ -3,6 +3,8 @@
   imports = [
     ./keymaps.nix
     ./theme.nix
+    ./filetype.nix
+    ./performance.nix
     ./extraConfig.nix
     ./lazy.nix
     ./autocmd.nix
@@ -47,7 +49,10 @@
 
   clipboard = {
     register = "unnamedplus";
-    providers.wl-copy.enable = true;
+    providers.wl-copy = {
+      enable = true;
+      package = pkgs.wl-clipboard;
+    };
   };
 
   opts = {
@@ -89,7 +94,6 @@
     fzf-lua.enable = true;
     markdown-preview.enable = true;
     spectre.enable = true;
-    #TODO: keybind config for spectre
     spectre.replacePackage = pkgs.gnused;
     # persistence.enable = true;
   };

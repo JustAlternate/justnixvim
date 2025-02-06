@@ -19,6 +19,7 @@
     lsp.servers = {
       pyright = {
         enable = true;
+        filetypes = [ "python" ];
         extraOptions.settings = {
           # Using Ruff's import organizer
           pyright.disableOrganizeImports = true;

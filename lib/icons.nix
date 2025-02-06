@@ -1,5 +1,7 @@
 {
   diagnostics = {
+    update_in_insert = true;
+
     BoldError = " ";
     Error = " ";
     BoldWarning = " ";

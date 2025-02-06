@@ -1,6 +1,7 @@
 {
   plugins = {
     lsp-signature.enable = true;
+    lsp-lines.enable = true;
     lint.enable = true;
     lsp = {
       enable = true;
@@ -9,9 +10,22 @@
         "gi" = "implementation";
       };
       servers = {
-        html.enable = true;
-        cssls.enable = true;
-        java_language_server.enable = true;
+        html = {
+          enable = true;
+          filetypes = [ "html" ];
+        };
+        cssls = {
+          enable = true;
+          filetypes = [
+            "css"
+            "less"
+            "scss"
+          ];
+        };
+        java_language_server = {
+          enable = true;
+          filetypes = [ "java" ];
+        };
         bashls.enable = true;
       };
     };
