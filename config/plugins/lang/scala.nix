@@ -2,14 +2,13 @@
 {
 
   extraPackages = with pkgs; [
-    scala_3
-    scala-cli
+    scala_2_13
     scalafmt
-    scalafix
     coursier
     metals
     sbt
     mill
+    openjdk17
   ];
 
   extraPlugins = [
@@ -18,7 +17,7 @@
 
   plugins = {
     lsp.servers = {
-      metals.enable = true;
+      # metals.enable = true;
     };
   };
 }
