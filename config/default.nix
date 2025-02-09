@@ -42,7 +42,6 @@
 
     # Additional nvim plugins
     vimPlugins.plenary-nvim
-    (import ./plugins/ollama-copilot.nix { inherit (pkgs) lib buildGoModule fetchFromGitHub; })
   ];
 
   luaLoader.enable = true;

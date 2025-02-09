@@ -1,12 +1,13 @@
 {
   imports = [
+    ./alpha.nix
     ./lang
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix
     ./cmp.nix
     ./conform.nix
+    ./copilot.nix
     ./dap.nix
-    ./dashboard.nix
     ./fidget.nix
     ./flash.nix
     ./gitsigns.nix
@@ -20,7 +21,6 @@
     ./noice.nix
     ./notify.nix
     ./nui.nix
-    #./ollama-copilot.nix
     ./precognition.nix
     ./trouble.nix
     ./ufo.nix
