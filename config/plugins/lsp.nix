@@ -10,6 +10,10 @@
         "gi" = "implementation";
       };
       servers = {
+        protols = {
+          enable = true;
+          filetypes = [ "proto" ];
+        };
         html = {
           enable = true;
           filetypes = [ "html" ];
