@@ -2,7 +2,6 @@
 {
   extraPackages = with pkgs; [
     scala_2_13
-    scalafmt
     coursier
     sbt
     mill
@@ -12,6 +11,18 @@
   extraPlugins = [
     pkgs.vimPlugins.nvim-metals
   ];
+
+  plugins.conform-nvim.settings = {
+    formatters_by_ft = {
+      scala = [ "scalafmt" ];
+    };
+
+    formatters = {
+      scalafmt = {
+        command = "${pkgs.scalafmt}/bin/scalafmt";
+      };
+    };
+  };
 
   extraConfigLua = ''
     local metals_config = require("metals").bare_config()
