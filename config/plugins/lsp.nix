@@ -1,7 +1,6 @@
 {
   plugins = {
     lsp-signature.enable = true;
-    lsp-lines.enable = true;
     lint.enable = true;
     lsp = {
       enable = true;

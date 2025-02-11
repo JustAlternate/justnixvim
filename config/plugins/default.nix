@@ -21,7 +21,6 @@
     ./noice.nix
     ./notify.nix
     ./nui.nix
-    ./precognition.nix
     ./trouble.nix
     ./ufo.nix
     ./whichkey.nix
