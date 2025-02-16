@@ -7,7 +7,6 @@
     ./cmp.nix
     ./conform.nix
     ./copilot.nix
-    ./dap.nix
     ./fidget.nix
     ./flash.nix
     ./gitsigns.nix

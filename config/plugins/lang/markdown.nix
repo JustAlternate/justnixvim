@@ -28,10 +28,10 @@
       };
     };
 
-    lint = {
-      lintersByFt.md = [ "markdownlint-cli2" ];
-      linters.markdownlint-cli2.cmd = "${pkgs.markdownlint-cli2}/bin/markdownlint-cli2";
-    };
+    # lint = {
+    #   lintersByFt.md = [ "markdownlint-cli2" ];
+    #   linters.markdownlint-cli2.cmd = "${pkgs.markdownlint-cli2}/bin/markdownlint-cli2";
+    # };
   };
 
   keymaps = [
