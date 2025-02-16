@@ -15,6 +15,7 @@
     ./lsp.nix
     ./lspkind.nix
     ./lspsaga.nix
+    ./lualine.nix
     ./luasnip.nix
     ./mini.nix
     ./neotree.nix
