@@ -239,6 +239,13 @@
 
     {
       mode = "n";
+      key = "<leader>fm";
+      action = "<cmd>Telescope git_status<cr>";
+      options.desc = "Telescope Git Modified Files";
+    }
+
+    {
+      mode = "n";
       key = "<leader>fg";
       action = "<cmd>Telescope git_files<cr>";
       options.desc = "Telescope Git Files";
