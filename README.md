@@ -1,4 +1,4 @@
-<p align=center>Nixvim flake based on Lazyvim with golang support</p>
+# <p align=center>Nixvim flake based on Lazyvim with golang support</p>
 
 ---
 
