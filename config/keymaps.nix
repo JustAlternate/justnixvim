@@ -272,6 +272,13 @@
       options.desc = "Telescope Search Grep in All Files";
     }
 
+    {
+      mode = "n";
+      key = "gr";
+      action = "<cmd>Telescope lsp_references<cr>";
+      options.desc = "Telescope to code references";
+    }
+
     # Refactoring
     {
       mode = "n";

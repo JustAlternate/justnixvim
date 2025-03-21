@@ -27,7 +27,7 @@
       };
 
       lightbulb = {
-        enable = true;
+        enable = false;
         sign = false;
       };
 

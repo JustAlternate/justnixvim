@@ -79,7 +79,6 @@
   };
 
   plugins = {
-    # trim.enable = true;
     neoscroll.enable = true;
     dressing.enable = true;
     todo-comments.enable = true;
@@ -93,7 +92,5 @@
     markdown-preview.enable = true;
     spectre.enable = true;
     spectre.replacePackage = pkgs.gnused;
-    # persistence.enable = true;
   };
-
 }
