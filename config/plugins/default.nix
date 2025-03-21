@@ -6,7 +6,6 @@
     ./treesitter/treesitter-textobjects.nix
     ./cmp.nix
     ./conform.nix
-    ./copilot.nix
     ./fidget.nix
     ./flash.nix
     ./gitsigns.nix
@@ -17,6 +16,7 @@
     ./lualine.nix
     ./luasnip.nix
     ./mini.nix
+    ./neocord.nix
     ./neotree.nix
     ./noice.nix
     ./notify.nix
