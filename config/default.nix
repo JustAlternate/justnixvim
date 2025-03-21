@@ -16,6 +16,8 @@
     chafa
     ripgrep
     fzf
+    viu
+    ueberzugpp
     fd
     gnused
     cmake
