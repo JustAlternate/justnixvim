@@ -16,6 +16,7 @@
     ./lualine.nix
     ./luasnip.nix
     ./mini.nix
+    ./minuet.nix
     ./neocord.nix
     ./neotree.nix
     ./noice.nix
