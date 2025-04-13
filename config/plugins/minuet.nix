@@ -3,7 +3,6 @@
   extraPlugins = [ pkgs.vimPlugins.minuet-ai-nvim ];
   extraConfigLua = ''
       require('minuet').setup {
-        notify = 'debug',
         provider = 'openai_compatible',
         request_timeout = 2,
         throttle = 1000, -- Increase to reduce costs and avoid rate limits
