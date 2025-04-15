@@ -3,6 +3,7 @@
   extraPlugins = [ pkgs.vimPlugins.minuet-ai-nvim ];
   extraConfigLua = ''
       require('minuet').setup {
+        -- notify = 'debug',
         provider = 'openai_compatible',
         context_window = 8000,
         -- when the total characters exceed the context window, the ratio of
@@ -16,11 +17,10 @@
         n_completions = 1,
         provider_options = {
             openai_compatible = {
-                stream = true,
-                end_point = 'https://api.groq.com/openai/v1/chat/completions',
-                api_key = 'GROQ_API_KEY',
-                model = 'qwen-2.5-coder-32b',
-                name = 'Groq',
+                stream = false,
+                end_point = 'https://api.deepinfra.com/v1/openai/chat/completions',
+                api_key = 'DEEPINFRA_API_KEY',
+                model = 'Qwen/Qwen2.5-Coder-32B-Instruct',
                 optional = {
                     max_tokens = 128,
                     top_p = 0.9,
