@@ -4,7 +4,13 @@
   extraConfigLua = ''
       require('minuet').setup {
         provider = 'openai_compatible',
-        request_timeout = 2,
+        context_window = 8000,
+        -- when the total characters exceed the context window, the ratio of
+        -- context before cursor and after cursor, the larger the ratio the more
+        -- context before cursor will be used. This option should be between 0 and
+        -- 1, context_ratio = 0.75 means the ratio will be 3:1.
+        context_ratio = 0.75,
+        request_timeout = 5,
         throttle = 1000, -- Increase to reduce costs and avoid rate limits
         debounce = 300, -- Increase to reduce costs and avoid rate limits
         n_completions = 1,
