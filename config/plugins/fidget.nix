@@ -27,7 +27,7 @@
           progressRingbufSize = 0; # Configure the nvim's LSP progress ring buffer size
         };
         display = {
-          renderLimit = 16; # How many LSP messages to show at once
+          renderLimit = 5; # How many LSP messages to show at once
           doneTtl = 3; # How long a message should persist after completion
           doneIcon = "✔"; # Icon shown when all LSP progress tasks are complete
           doneStyle = "Constant"; # Highlight group for completed LSP tasks
@@ -60,7 +60,7 @@
     };
     settings.notification = {
       pollRate = 10; # How frequently to update and render notifications
-      filter = "info"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
+      filter = "error"; # “off”, “error”, “warn”, “info”, “debug”, “trace”
       historySize = 128; # Number of removed messages to retain in history
       overrideVimNotify = true;
 

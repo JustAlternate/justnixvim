@@ -19,12 +19,19 @@
 
     lint = {
       lintersByFt = {
-        nix = [ "statix" ];
+        nix = [
+          "statix"
+          "deadnix"
+        ];
       };
 
       linters = {
         statix = {
           cmd = "${pkgs.statix}/bin/statix";
+        };
+
+        deadnix = {
+          cmd = "${pkgs.deadnix}/bin/deadnix";
         };
       };
     };

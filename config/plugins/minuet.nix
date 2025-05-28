@@ -22,7 +22,7 @@
                 api_key = 'DEEPINFRA_API_KEY',
                 model = 'Qwen/Qwen2.5-Coder-32B-Instruct',
                 optional = {
-                    max_tokens = 128,
+                    max_tokens = 2048,
                     top_p = 0.9,
                 },
             },
