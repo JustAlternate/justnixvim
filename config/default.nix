@@ -91,7 +91,6 @@
     bufferline.enable = true;
     fzf-lua.enable = true;
     markdown-preview.enable = true;
-    markdown-preview.lazyLoad.settings.ft = "markdown";
     spectre.enable = true;
   };
 }
