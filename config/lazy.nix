@@ -1,5 +1,5 @@
 {
   plugins.lazy = {
-    enable = false;
+    enable = true;
   };
 }

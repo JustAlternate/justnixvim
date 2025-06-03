@@ -1,12 +1,14 @@
 {
   imports = [
     ./docker.nix
-    ./go.nix
+    # ./go.nix
     ./markdown.nix
     ./nix.nix
-    ./php.nix
-    ./python.nix
-    ./scala.nix
+    # ./php.nix
+    # ./python.nix
+    # ./scala.nix
     ./terraform.nix
+    # ./typst.nix
+    # ./docker.nix
   ];
 }
