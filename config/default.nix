@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./keymaps.nix
@@ -82,7 +82,6 @@
 
   plugins = {
     neoscroll.enable = true;
-    dressing.enable = true;
     todo-comments.enable = true;
     web-devicons.enable = true;
     toggleterm.enable = false;
@@ -92,7 +91,7 @@
     bufferline.enable = true;
     fzf-lua.enable = true;
     markdown-preview.enable = true;
+    markdown-preview.lazyLoad.settings.ft = "markdown";
     spectre.enable = true;
-    spectre.replacePackage = pkgs.gnused;
   };
 }

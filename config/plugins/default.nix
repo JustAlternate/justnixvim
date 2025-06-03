@@ -9,7 +9,7 @@
     ./fidget.nix
     ./flash.nix
     ./gitsigns.nix
-    ./go-nvim.nix
+    # ./go-nvim.nix
     ./lsp.nix
     ./lspkind.nix
     ./lspsaga.nix
