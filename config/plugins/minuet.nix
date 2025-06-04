@@ -38,9 +38,9 @@
             show_on_completion_menu = true,
             keymap = {
                 -- accept whole completion
-                accept = '<A-A>',
+                accept = '<A-a>',
                 -- accept one line
-                accept_line = '<A-a>',
+                accept_line = '<A-A>',
                 -- accept n lines (prompts for number)
                 -- e.g. "A-z 2 CR" will accept 2 lines
                 accept_n_lines = '<A-z>',
