@@ -2,6 +2,7 @@
   imports = [
     ./alpha.nix
     ./lang
+    ./aw-watcher.nix
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix
     ./cmp.nix
