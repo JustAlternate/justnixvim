@@ -22,6 +22,16 @@
     lsp.servers = {
       gopls.enable = true;
     };
+    conform-nvim.settings = {
+      formatters_by_ft = {
+        go = [ "gofmt" ];
+      };
+      formatters = {
+        gofmt = {
+          command = "${pkgs.go}/bin/gofmt";
+        };
+      };
+    };
   };
 
   extraPlugins = with pkgs.vimPlugins; [
