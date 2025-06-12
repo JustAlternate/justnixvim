@@ -17,13 +17,13 @@
     ./luasnip.nix
     ./mini.nix
     ./minuet.nix
-    ./neocord.nix
+    # ./neocord.nix
     ./neotree.nix
     ./noice.nix
     ./notify.nix
     ./nui.nix
     ./trouble.nix
-    ./ufo.nix
+    # ./ufo.nix
     ./whichkey.nix
   ];
 }
