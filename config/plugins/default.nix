@@ -1,15 +1,14 @@
 {
   imports = [
     ./alpha.nix
-    ./lang
     ./aw-watcher.nix
-    ./treesitter/treesitter.nix
-    ./treesitter/treesitter-textobjects.nix
+    ./dap.nix
     ./cmp.nix
     ./conform.nix
     ./fidget.nix
     ./flash.nix
     ./gitsigns.nix
+    ./lang
     ./lsp.nix
     ./lspkind.nix
     ./lspsaga.nix
@@ -22,6 +21,8 @@
     ./noice.nix
     ./notify.nix
     ./nui.nix
+    ./treesitter/treesitter.nix
+    ./treesitter/treesitter-textobjects.nix
     ./trouble.nix
     ./ufo.nix
     ./whichkey.nix

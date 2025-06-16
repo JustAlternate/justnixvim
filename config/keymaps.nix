@@ -94,15 +94,8 @@
     {
       mode = "n";
       key = "<leader>bd";
-      action = ":lua Snacks.bufdelete()<cr>";
+      action = "<cmd>bdelete<cr>";
       options.desc = "Delete Buffer";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>bo";
-      action = ":lua Snacks.bufdelete.other()<cr>";
-      options.desc = "Delete Other Buffers";
     }
 
     # Splitting
@@ -204,29 +197,8 @@
     {
       mode = "n";
       key = "<leader>gg";
-      action = ":lua Snacks.lazygit()<cr>";
+      action = "<cmd>LazyGit<cr>";
       options.desc = "Lazygit (cwd)";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>gl";
-      action = ":lua Snacks.lazygit.log_file()<cr>";
-      options.desc = "Lazygit Current File History";
-    }
-
-    # Floating Terminal
-    {
-      mode = "n";
-      key = "<leader>th";
-      action = ":lua Snacks.terminal()<cr>";
-      options.desc = "Horizontal Terminal (cwd)";
-    }
-    {
-      mode = "n";
-      key = "<leader>tv";
-      action = ":lua Snacks.terminal.open(nil, { win = { position = 'right' }})<cr>";
-      options.desc = "Vertical Terminal (cwd)";
     }
 
     # Telescope Bindings

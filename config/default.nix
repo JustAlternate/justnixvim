@@ -6,7 +6,6 @@
     ./filetype.nix
     ./performance.nix
     ./extraConfig.nix
-    ./lazy.nix
     ./autocmd.nix
     ./plugins
   ];
@@ -84,8 +83,6 @@
     neoscroll.enable = true;
     todo-comments.enable = true;
     web-devicons.enable = true;
-    toggleterm.enable = false;
-    snacks.enable = true;
     lazygit.enable = true;
     telescope.enable = true;
     bufferline.enable = true;
