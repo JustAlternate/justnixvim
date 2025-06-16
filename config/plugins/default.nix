@@ -23,7 +23,7 @@
     ./notify.nix
     ./nui.nix
     ./trouble.nix
-    # ./ufo.nix
+    ./ufo.nix
     ./whichkey.nix
   ];
 }
