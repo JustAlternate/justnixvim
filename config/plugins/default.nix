@@ -5,6 +5,7 @@
     ./dap.nix
     ./cmp.nix
     ./conform.nix
+    ./codecompanion.nix
     ./fidget.nix
     ./flash.nix
     ./gitsigns.nix
