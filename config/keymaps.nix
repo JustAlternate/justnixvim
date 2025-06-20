@@ -94,7 +94,7 @@
     {
       mode = "n";
       key = "<leader>bd";
-      action = "<cmd>bdelete<cr>";
+      action = "<cmd>bd!<cr>";
       options.desc = "Delete Buffer";
     }
 
@@ -174,17 +174,6 @@
       options.desc = "Deletes to void register and paste over";
     }
 
-    # Delete to void register
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>D";
-      action = "\"_d";
-      options.desc = "Delete to void register";
-    }
-
     # Files
     {
       mode = "n";
@@ -242,13 +231,6 @@
       key = "<leader>sf";
       action = "<cmd>Telescope live_grep<cr>";
       options.desc = "Telescope Search Grep in All Files";
-    }
-
-    {
-      mode = "n";
-      key = "gr";
-      action = "<cmd>Telescope lsp_references<cr>";
-      options.desc = "Telescope to code references";
     }
 
     # Refactoring
