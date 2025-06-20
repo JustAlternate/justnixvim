@@ -4,10 +4,6 @@
     lint.enable = true;
     lsp = {
       enable = true;
-      keymaps.lspBuf = {
-        "<c-k>" = "signature_help";
-        "gi" = "implementation";
-      };
       servers = {
         protols = {
           enable = true;

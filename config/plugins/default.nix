@@ -21,7 +21,7 @@
     ./neotree.nix
     ./noice.nix
     ./notify.nix
-    ./nui.nix
+    # ./nui.nix
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix
     ./trouble.nix

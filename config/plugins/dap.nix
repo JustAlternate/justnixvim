@@ -73,10 +73,4 @@
       };
     }
   ];
-  extraConfigLuaPre = ''
-    -- function debugAction()
-    --     require("dap").continue()
-    --     require("debugmaster").mode.toggle()
-    -- end
-  '';
 }

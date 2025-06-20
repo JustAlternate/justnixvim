@@ -13,7 +13,6 @@
         flash = true;
         fidget = true;
         gitsigns = true;
-        lsp_trouble = true;
         mini.enabled = true;
         neotree = true;
         noice = true;

@@ -80,68 +80,32 @@
         silent = true;
       };
     }
-    {
-      mode = "n";
-      key = "gd";
-      action = "<cmd>Lspsaga goto_definition<CR>";
-      options = {
-        desc = "Goto Definition";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "gt";
-      action = "<cmd>Lspsaga goto_type_definition<CR>";
-      options = {
-        desc = "Type Definitions";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "gpd";
-      action = "<cmd>Lspsaga peek_definition<CR>";
-      options = {
-        desc = "Peek Definitions";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "gpt";
-      action = "<cmd>Lspsaga peek_type_definition<CR>";
-      options = {
-        desc = "Peek Type Definitions";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "gl";
-      action = "<cmd>Lspsaga show_line_diagnostics<CR>";
-      options = {
-        desc = "Line Diagnostics";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "[d";
-      action = "<cmd>Lspsaga diagnostic_jump_next<CR>";
-      options = {
-        desc = "Next Diagnostic";
-        silent = true;
-      };
-    }
-    {
-      mode = "n";
-      key = "]d";
-      action = "<cmd>Lspsaga diagnostic_jump_prev<CR>";
-      options = {
-        desc = "Previous Diagnostic";
-        silent = true;
-      };
-    }
+    # {
+    #   mode = "n";
+    #   key = "gl";
+    #   action = "<cmd>Lspsaga show_line_diagnostics<CR>";
+    #   options = {
+    #     desc = "Line Diagnostics";
+    #     silent = true;
+    #   };
+    # }
+    # {
+    #   mode = "n";
+    #   key = "[d";
+    #   action = "<cmd>Lspsaga diagnostic_jump_next<CR>";
+    #   options = {
+    #     desc = "Next Diagnostic";
+    #     silent = true;
+    #   };
+    # }
+    # {
+    #   mode = "n";
+    #   key = "]d";
+    #   action = "<cmd>Lspsaga diagnostic_jump_prev<CR>";
+    #   options = {
+    #     desc = "Previous Diagnostic";
+    #     silent = true;
+    #   };
+    # }
   ];
 }

@@ -73,18 +73,18 @@
   };
 
   keymaps = [
-    {
-      mode = "n";
-      key = "zR";
-      action = helpers.mkRaw "function() require('ufo').openAllFolds() end";
-      options.desc = "open all folds";
-    }
-    {
-      mode = "n";
-      key = "zM";
-      action = helpers.mkRaw "function() require('ufo').closeAllFolds() end";
-      options.desc = "close all folds";
-    }
+    # {
+    #   mode = "n";
+    #   key = "zR";
+    #   action = helpers.mkRaw "function() require('ufo').openAllFolds() end";
+    #   options.desc = "open all folds";
+    # }
+    # {
+    #   mode = "n";
+    #   key = "zM";
+    #   action = helpers.mkRaw "function() require('ufo').closeAllFolds() end";
+    #   options.desc = "close all folds";
+    # }
     {
       mode = "n";
       key = "zK";
