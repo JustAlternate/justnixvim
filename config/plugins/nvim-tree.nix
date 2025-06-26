@@ -9,10 +9,10 @@
     {
       mode = "n";
       key = "<leader>e";
-      action = "<cmd>Neotree toggle<cr>";
+      action = "<cmd>NvimTreeToggle<cr>";
       options = {
         silent = true;
-        desc = "Explorer NeoTree (root dir)";
+        desc = "Explorer NvimTree (root dir)";
       };
     }
   ];
