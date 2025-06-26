@@ -9,10 +9,6 @@
     lsp-signature.enable = true;
     lint.enable = true;
 
-    lspconfig = {
-      enable = true;
-    };
-
     lsp = {
       enable = true;
       servers = {
