@@ -5,14 +5,14 @@
       require('minuet').setup {
         -- notify = 'debug',
         provider = 'openai_compatible',
-        context_window = 450,
+        context_window = 1000,
         -- when the total characters exceed the context window, the ratio of
         -- context before cursor and after cursor, the larger the ratio the more
         -- context before cursor will be used. This option should be between 0 and
         -- 1, context_ratio = 0.75 means the ratio will be 3:1.
         context_ratio = 0.75,
         request_timeout = 5,
-        throttle = 1500, -- Increase to reduce costs and avoid rate limits
+        throttle = 1000, -- Increase to reduce costs and avoid rate limits
         debounce = 800, -- Increase to reduce costs and avoid rate limits
         n_completions = 1,
         provider_options = {
@@ -20,9 +20,9 @@
                 stream = false,
                 end_point = 'https://api.deepinfra.com/v1/openai/chat/completions',
                 api_key = 'DEEPINFRA_API_KEY',
-                model = 'Qwen/Qwen2.5-Coder-32B-Instruct',
+                model = 'deepseek-ai/DeepSeek-V3-0324-Turbo',
                 optional = {
-                    max_tokens = 4080,
+                    max_tokens = 12000,
                     top_p = 0.9,
                 },
             },
