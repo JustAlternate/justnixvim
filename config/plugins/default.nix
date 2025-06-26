@@ -18,7 +18,7 @@
     ./mini.nix
     ./minuet.nix
     # ./neocord.nix
-    ./neotree.nix
+    ./nvim-tree.nix
     ./noice.nix
     ./notify.nix
     # ./nui.nix

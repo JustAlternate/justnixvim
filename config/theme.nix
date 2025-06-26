@@ -14,7 +14,7 @@
         fidget = true;
         gitsigns = true;
         mini.enabled = true;
-        neotree = true;
+        nvimtree = true;
         noice = true;
         notify = true;
         telescope.enabled = true;
