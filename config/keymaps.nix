@@ -94,7 +94,7 @@
     {
       mode = "n";
       key = "<leader>bd";
-      action = "<cmd>bd!<cr>";
+      action = "<cmd>bdelete<cr>";
       options.desc = "Delete Buffer";
     }
 
