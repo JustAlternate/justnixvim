@@ -10,4 +10,7 @@
     ./terraform.nix
     # ./typst.nix
   ];
+  plugins.lsp.servers = {
+    protols.enable = true;
+  };
 }
