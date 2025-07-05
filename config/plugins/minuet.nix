@@ -12,17 +12,17 @@
         -- 1, context_ratio = 0.75 means the ratio will be 3:1.
         context_ratio = 0.75,
         request_timeout = 5,
-        throttle = 1000, -- Increase to reduce costs and avoid rate limits
-        debounce = 800, -- Increase to reduce costs and avoid rate limits
+        throttle = 750, -- Increase to reduce costs and avoid rate limits
+        debounce = 500, -- Increase to reduce costs and avoid rate limits
         n_completions = 1,
         provider_options = {
             openai_compatible = {
-                stream = false,
-                end_point = 'https://api.deepinfra.com/v1/openai/chat/completions',
-                api_key = 'DEEPINFRA_API_KEY',
-                model = 'deepseek-ai/DeepSeek-V3-0324-Turbo',
+                stream = true,
+                end_point = 'https://openrouter.ai/api/v1/chat/completions',
+                api_key = 'OPENROUTER_API_KEY',
+                model = 'inception/mercury',
                 optional = {
-                    max_tokens = 12000,
+                    max_tokens = 10000,
                     top_p = 0.9,
                 },
             },
@@ -38,7 +38,7 @@
             show_on_completion_menu = true,
             keymap = {
                 -- accept whole completion
-                accept = '<D-a>',
+                accept = '<A-a>',
                 -- accept one line
                 accept_line = '<A-A>',
                 -- accept n lines (prompts for number)
