@@ -63,16 +63,19 @@
     cmdheight = 2;
     ignorecase = true;
     smartcase = true;
-    updatetime = 50;
-    timeoutlen = 250;
+    updatetime = 300;
+    timeoutlen = 500;
+    errorbells = false;
 
     tabstop = 2;
     shiftwidth = 2;
     smartindent = true;
 
+    ttyfast = true;
+
     # Undo stuff from days ago
-    swapfile = true;
-    undofile = true;
+    # swapfile = true;
+    # undofile = true;
 
     # Better splitting
     splitbelow = true;
