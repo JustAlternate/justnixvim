@@ -20,7 +20,7 @@
                 stream = true,
                 end_point = 'https://openrouter.ai/api/v1/chat/completions',
                 api_key = 'OPENROUTER_API_KEY',
-                model = 'inception/mercury',
+                model = 'inception/mercury-coder',
                 optional = {
                     max_tokens = 10000,
                     top_p = 0.9,
@@ -38,9 +38,9 @@
             show_on_completion_menu = true,
             keymap = {
                 -- accept whole completion
-                accept = '<A-a>',
+                accept = '<D-a>',
                 -- accept one line
-                accept_line = '<A-A>',
+                accept_line = '<D-A>',
                 -- accept n lines (prompts for number)
                 -- e.g. "A-z 2 CR" will accept 2 lines
                 accept_n_lines = '<A-z>',
