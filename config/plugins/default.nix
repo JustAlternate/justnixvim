@@ -1,7 +1,7 @@
 {
   imports = [
     ./alpha.nix
-    ./aw-watcher.nix
+    # ./aw-watcher.nix
     ./dap.nix
     ./cmp.nix
     ./conform.nix
