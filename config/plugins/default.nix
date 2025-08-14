@@ -1,7 +1,6 @@
 {
   imports = [
     ./alpha.nix
-    # ./aw-watcher.nix
     ./dap.nix
     ./cmp.nix
     ./conform.nix
@@ -17,15 +16,14 @@
     ./luasnip.nix
     ./mini.nix
     ./minuet.nix
-    # ./neocord.nix
     ./nvim-tree.nix
     ./noice.nix
     ./notify.nix
-    # ./nui.nix
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix
     ./trouble.nix
     ./ufo.nix
+    ./wrapping.nix
     ./whichkey.nix
   ];
 }
