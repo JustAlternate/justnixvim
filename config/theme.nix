@@ -1,12 +1,12 @@
 {
   colorschemes.catppuccin = {
-    enable = false;
+    enable = true;
     settings = {
       background = {
         light = "macchiato";
         dark = "mocha";
       };
-      flavour = "macchiato"; # “latte”, “mocha”, “frappe”, “macchiato”, “auto”
+      flavour = "mocha"; # “latte”, “mocha”, “frappe”, “macchiato”, “auto”
       transparent_background = true;
       integrations = {
         cmp = true;
