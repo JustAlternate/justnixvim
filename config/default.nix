@@ -87,7 +87,22 @@
     todo-comments.enable = true;
     web-devicons.enable = true;
     lazygit.enable = true;
-    telescope.enable = true;
+    telescope = {
+      enable = true;
+      settings = {
+        defaults = {
+          file_ignore_patterns = [
+            "mocks/"
+            "^.git/"
+            "^.mypy_cache/"
+            "^__pycache__/"
+            "^output/"
+            "^data/"
+            "%.ipynb"
+          ];
+        };
+      };
+    };
     bufferline.enable = true;
     fzf-lua.enable = true;
     markdown-preview.enable = true;
