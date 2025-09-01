@@ -3,17 +3,17 @@
     enable = true;
     settings = {
       adapters = {
-        chutes_ai = {
+        openrouter_ai = {
           __raw = ''
             function()
               return require("codecompanion.adapters").extend("openai_compatible", {
                 env = {
-                  url="https://llm.chutes.ai",
+                  url="https://openrouter.ai/api",
                   chat_url = "/v1/chat/completions",
                 };
                 schema = {
                   model = {
-                    default = "Qwen/Qwen3-235B-A22B-Instruct-2507",
+                    default = "mistralai/devstral-medium",
                   };
                 };
               })

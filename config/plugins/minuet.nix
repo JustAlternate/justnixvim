@@ -5,7 +5,7 @@
       require('minuet').setup {
         -- notify = 'debug',
         provider = 'openai_compatible',
-        context_window = 1000,
+        context_window = 3000,
         -- when the total characters exceed the context window, the ratio of
         -- context before cursor and after cursor, the larger the ratio the more
         -- context before cursor will be used. This option should be between 0 and
@@ -22,7 +22,7 @@
                 api_key = 'OPENROUTER_API_KEY',
                 model = 'mistralai/codestral-2508',
                 optional = {
-                    max_tokens = 2500,
+                    max_tokens = 1000,
                     top_p = 0.9,
                 },
             },
