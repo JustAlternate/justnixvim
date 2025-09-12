@@ -8,6 +8,7 @@
     # ./python.nix
     # ./scala.nix
     ./terraform.nix
+    ./typescript.nix
     # ./typst.nix
   ];
   plugins.lsp.servers = {
