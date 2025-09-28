@@ -2,6 +2,9 @@
 
 ---
 
+![](./assets/20250928-13:59:05.png)
+
+
 # 🔨 Installation
 
 If you'd like to give it a try before installing: `nix run github:JustAlternate/justnixvim`
