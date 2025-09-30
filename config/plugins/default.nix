@@ -1,10 +1,9 @@
 {
   imports = [
     ./alpha.nix
-    ./dap.nix
+    # ./dap.nix
     ./cmp.nix
     ./conform.nix
-    ./codecompanion.nix
     ./fidget.nix
     ./flash.nix
     ./gitsigns.nix
@@ -16,14 +15,13 @@
     ./luasnip.nix
     ./mini.nix
     ./minuet.nix
-    ./nvim-tree.nix
     ./noice.nix
     ./notify.nix
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix
     ./trouble.nix
     ./ufo.nix
-    ./wrapping.nix
+    # ./wrapping.nix
     ./whichkey.nix
   ];
 }

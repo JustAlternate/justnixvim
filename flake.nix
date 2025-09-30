@@ -2,8 +2,8 @@
   description = "A nixvim configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixvim.url = "github:nix-community/nixvim";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixvim.url = "github:nix-community/nixvim/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -25,8 +25,7 @@
         nixvim' = nixvim.legacyPackages.${system};
         nixvimModule = {
           inherit pkgs;
-          module = import ./config; # import the module directly
-          # You can use `extraSpecialArgs` to pass additional arguments to your module files
+          module = import ./config;
           extraSpecialArgs = {
             inherit inputs;
           } // import ./lib { inherit pkgs; };
@@ -35,11 +34,8 @@
       in
       {
         checks = {
-          # Run `nix flake check` to verify that your config is not broken
           default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
         };
-
-        # Lets you run `nix run` to start nixvim
         packages.default = nvim;
       }
     );
