@@ -17,6 +17,7 @@
     ./minuet.nix
     ./noice.nix
     ./notify.nix
+    ./tree.nix
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix
     ./trouble.nix
