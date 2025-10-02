@@ -36,7 +36,6 @@
       callback = function(ev)
         local buf = ev.buf
         clear_gr_mappings(buf)
-        -- retry once after a short delay in case another plugin rebinds immediately
         vim.defer_fn(function()
           clear_gr_mappings(buf)
           setup_gr_to_telescope(buf)
@@ -46,7 +45,6 @@
       end,
     })
 
-    -- also clear on BufEnter for safety (handles non-LSP buffers where mappings may be global)
     vim.api.nvim_create_autocmd("BufEnter", {
       group = grp,
       callback = function(ev)

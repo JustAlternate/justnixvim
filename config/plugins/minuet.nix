@@ -11,9 +11,9 @@
         -- context before cursor will be used. This option should be between 0 and
         -- 1, context_ratio = 0.75 means the ratio will be 3:1.
         context_ratio = 0.75,
-        request_timeout = 3,
-        throttle = 750, -- Increase to reduce costs and avoid rate limits
-        debounce = 500, -- Increase to reduce costs and avoid rate limits
+        request_timeout = 2,
+        throttle = 500, -- Increase to reduce costs and avoid rate limits
+        debounce = 250, -- Increase to reduce costs and avoid rate limits
         n_completions = 3,
         provider_options = {
             openai_compatible = {
@@ -22,7 +22,7 @@
                 api_key = 'OPENROUTER_API_KEY',
                 model = 'mistralai/codestral-2508',
                 optional = {
-                    max_tokens = 1000,
+                    max_tokens = 1200,
                     top_p = 0.9,
                 },
             },
@@ -40,8 +40,7 @@
         },
         virtualtext = {
             auto_trigger_ft = {},
-            show_on_completion_menu = false,
-          
+            show_on_completion_menu = true,   
             keymap = {
                 -- accept whole completion
                 accept = '<D-a>',
