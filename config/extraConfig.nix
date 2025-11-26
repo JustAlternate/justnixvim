@@ -8,6 +8,9 @@
   '';
 
   extraConfigLua = ''
+
+    vim.deprecate = function() end  -- Silently ignore deprecation warnings
+
     local function clear_gr_mappings(buf)
       local modes = { "n", "x" }
       local keys  = { "gri", "grr", "gra", "grn" }

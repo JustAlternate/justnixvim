@@ -6,14 +6,14 @@
     nix-develop.enable = true;
 
     conform-nvim.settings = {
-      formatters_by_ft = {
-        nix = [ "nixfmt-rfc-style" ];
-      };
+      # formatters_by_ft = {
+      #   nix = [ "nixfmt-rfc-style" ];
+      # };
 
       formatters = {
-        nixfmt-rfc-style = {
-          command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
-        };
+        # nixfmt-rfc-style = {
+        #   command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+        # };
       };
     };
 
@@ -21,17 +21,12 @@
       lintersByFt = {
         nix = [
           "statix"
-          "deadnix"
         ];
       };
 
       linters = {
         statix = {
           cmd = "${pkgs.statix}/bin/statix";
-        };
-
-        deadnix = {
-          cmd = "${pkgs.deadnix}/bin/deadnix";
         };
       };
     };

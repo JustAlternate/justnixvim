@@ -1,11 +1,6 @@
 { pkgs, ... }:
 {
   plugins = {
-    clipboard-image = {
-      enable = true;
-      clipboardPackage = pkgs.wl-clipboard;
-    };
-
     markdown-preview = {
       enable = true;
     };
