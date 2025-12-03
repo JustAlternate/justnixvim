@@ -7,8 +7,6 @@
 
   plugins = {
     lsp-signature.enable = true;
-    lint.enable = true;
-
     lsp = {
       enable = true;
       servers = {
@@ -33,6 +31,7 @@
           filetypes = [ "java" ];
         };
         bashls.enable = true;
+        yamlls.enable = true;
       };
 
       keymaps = {

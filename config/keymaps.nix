@@ -246,6 +246,13 @@
       action = "<cmd>lua require('spectre').open_file_search()<CR>";
       options.desc = "Spectre replace in file";
     }
-
+    {
+      mode = "n";
+      key = "<leader>m";
+      action = "<cmd>MarkdownPreview<cr>";
+      options = {
+        desc = "Markdown preview";
+      };
+    }
   ];
 }

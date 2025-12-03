@@ -2,35 +2,28 @@
   plugins = {
     lspsaga = {
       enable = true;
-      hover = {
-        openCmd = "!firefox";
-        openLink = "gx";
-      };
-      symbolInWinbar = {
-        enable = false; # Breadcrumbs
-        showFile = false;
-      };
+      settings = {
+        hover = {
+          openCmd = "!firefox";
+          openLink = "gx";
+        };
+        symbolInWinbar = {
+          enable = false; # Breadcrumbs
+          showFile = false;
+        };
 
-      lightbulb = {
-        enable = false;
-        sign = false;
+        lightbulb = {
+          enable = false;
+          sign = false;
+        };
       };
     };
-
-    which-key.settings.spec = [
-      {
-        __unkeyed-1 = "gp";
-        mode = "n";
-        group = "+peek";
-      }
-    ];
   };
 
   keymaps = [
     {
       mode = "n";
       key = "K";
-      # action = "<cmd>Lspsaga hover_doc<CR>";
       action.__raw = ''
         function()
           local winid = require("ufo").peekFoldedLinesUnderCursor()

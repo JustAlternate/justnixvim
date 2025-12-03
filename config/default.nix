@@ -30,7 +30,6 @@
     statix # Lints and suggestions for the nix programming language
     nixfmt-rfc-style # Nix Code Formatter
 
-    # llm-ls
     lua-language-server
     stylua
     shfmt
@@ -79,32 +78,5 @@
     # Better splitting
     splitbelow = true;
     splitright = true;
-  };
-
-  plugins = {
-    neoscroll.enable = true;
-    todo-comments.enable = true;
-    web-devicons.enable = true;
-    lazygit.enable = true;
-    telescope = {
-      enable = true;
-      settings = {
-        defaults = {
-          file_ignore_patterns = [
-            "mocks/"
-            "^.git/"
-            "^.mypy_cache/"
-            "^__pycache__/"
-            "^output/"
-            "^data/"
-            "%.ipynb"
-          ];
-        };
-      };
-    };
-    bufferline.enable = true;
-    fzf-lua.enable = true;
-    markdown-preview.enable = true;
-    spectre.enable = true;
   };
 }

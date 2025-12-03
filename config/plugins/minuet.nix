@@ -4,8 +4,8 @@
   extraConfigLua = ''
     local is_mac = vim.loop.os_uname().sysname == "Darwin"
 
-    local accept_key = is_mac and "<D-a>" or "<C-a>"
-    local accept_line_key = is_mac and "<D-A>" or "<C-A>"
+    local accept_key = is_mac and "<D-a>" or "<C-A>"
+    local accept_line_key = is_mac and "<D-A>" or "<C-S-a>"
     local accept_n_lines_key = is_mac and "<A-z>" or "<M-z>"
     local prev_key = is_mac and "<D-e>" or "<C-e>"
     local next_key = is_mac and "<D-z>" or "<C-z>"
