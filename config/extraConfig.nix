@@ -8,6 +8,7 @@
   '';
 
   extraConfigLua = ''
+    vim.g.clipboard = 'osc52'
 
     vim.deprecate = function() end  -- Silently ignore deprecation warnings
 
