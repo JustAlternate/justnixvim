@@ -13,7 +13,7 @@
 
     require('minuet').setup {
         provider = 'openai_compatible',
-        context_window = 3000,
+        context_window = 5000,
         context_ratio = 0.75,
         request_timeout = 2,
         throttle = 500,
@@ -24,7 +24,7 @@
                 stream = true,
                 end_point = 'https://openrouter.ai/api/v1/chat/completions',
                 api_key = 'OPENROUTER_API_KEY',
-                model = 'mistralai/codestral-2508',
+                model = 'openai/gpt-oss-safeguard-20b',
                 optional = {
                     max_tokens = 1200,
                     top_p = 0.9,
