@@ -4,7 +4,7 @@
       enable = true;
       settings = {
         hover = {
-          openCmd = "!firefox";
+          openCmd = "!librewolf";
           openLink = "gx";
         };
         symbolInWinbar = {
