@@ -32,6 +32,12 @@
     todo-comments.enable = true;
     web-devicons.enable = true;
     lazygit.enable = true;
+    showkeys.enable = true;
+    showkeys.settings = {
+      maxkeys = 3;
+      position = "bottom-right";
+      timeout = 5;
+    };
     telescope = {
       enable = true;
       settings = {
