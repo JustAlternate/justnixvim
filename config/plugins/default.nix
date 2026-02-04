@@ -1,5 +1,7 @@
+{ pkgs, ... }:
 {
   imports = [
+    ./99-config.nix
     ./alpha.nix
     ./aw-watcher.nix
     # ./dap.nix
@@ -25,6 +27,10 @@
     ./ufo.nix
     # ./wrapping.nix
     ./whichkey.nix
+  ];
+
+  extraPlugins = with pkgs.vimPlugins; [
+    (pkgs.callPackage ./99.nix { })
   ];
 
   plugins = {
