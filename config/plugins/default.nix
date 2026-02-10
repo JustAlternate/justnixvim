@@ -63,7 +63,10 @@
     bufferline.enable = true;
     fzf-lua.enable = true;
     markdown-preview.enable = true;
-    spectre.enable = true;
+    spectre = {
+      enable = true;
+      package = pkgs.unstable.vimPlugins.nvim-spectre;
+    };
   };
 
 }
