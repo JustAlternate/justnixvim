@@ -52,11 +52,18 @@
       nvimSkipModules = [ "fzy.fzy-lua-native" ];
     })
   ];
+
   extraConfigLua = ''
-    require('go').setup({
-      run_in_floaterm = true
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = { "go", "gomod" },
+      callback = function()
+        require('go').setup({
+          run_in_floaterm = true
+        })
+      end,
     })
   '';
+
   keymaps = [
     {
       mode = "n";

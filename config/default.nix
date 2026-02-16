@@ -8,6 +8,7 @@
     ./extraConfig.nix
     ./autocmd.nix
     ./plugins
+    ./macos.nix  # Contains pkgs.lib.mkIf pkgs.stdenv.isDarwin internally
   ];
 
   extraPackages = with pkgs; [
@@ -45,9 +46,8 @@
 
   luaLoader.enable = true;
 
-  clipboard = {
-    register = "unnamedplus";
-  };
+  # Clipboard: handled in extraConfigLua (OSC52 for Linux)
+  # macOS clipboard handled conditionally in macos.nix
 
   opts = {
     number = true;
@@ -66,10 +66,6 @@
     smartindent = true;
 
     ttyfast = true;
-
-    # Undo stuff from days ago
-    # swapfile = true;
-    # undofile = true;
 
     # Better splitting
     splitbelow = true;

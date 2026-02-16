@@ -1,6 +1,12 @@
 {
   plugins.gitsigns = {
     enable = true;
+    settings = {
+      attach_to_untracked = false;
+      current_line_blame = false;
+      max_file_length = 40000;
+      update_debounce = 100;
+    };
   };
 
   keymaps = [

@@ -3,6 +3,17 @@
   plugins = {
     typescript-tools = {
       enable = true;
+      lazyLoad = {
+        enable = true;
+        settings = {
+          ft = [
+            "typescript"
+            "javascript"
+            "tsx"
+            "jsx"
+          ];
+        };
+      };
     };
     lint = {
       lintersByFt = {

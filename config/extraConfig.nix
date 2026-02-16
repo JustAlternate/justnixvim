@@ -1,16 +1,22 @@
-# extraConfig.nix
+# extraConfig.nix - Cross-platform config (macOS specifics in macos.nix)
 {
   extraConfigLuaPre = ''
-    vim.fn.sign_define("diagnosticsignerror", { text = " ", texthl = "diagnosticerror", linehl = "", numhl = "" })
-    vim.fn.sign_define("diagnosticsignwarn",  { text = " ", texthl = "diagnosticwarn",  linehl = "", numhl = "" })
+    vim.fn.sign_define("diagnosticsignerror", { text = "", texthl = "diagnosticerror", linehl = "", numhl = "" })
+    vim.fn.sign_define("diagnosticsignwarn",  { text = "", texthl = "diagnosticwarn",  linehl = "", numhl = "" })
     vim.fn.sign_define("diagnosticsignhint",  { text = "󰌵", texthl = "diagnostichint", linehl = "", numhl = "" })
-    vim.fn.sign_define("diagnosticsigninfo",  { text = " ", texthl = "diagnosticinfo", linehl = "", numhl = "" })
+    vim.fn.sign_define("diagnosticsigninfo",  { text = "", texthl = "diagnosticinfo", linehl = "", numhl = "" })
   '';
 
   extraConfigLua = ''
+    -- Linux: Use OSC52 for remote/SSH sessions
+    -- macOS: Native clipboard configured in macos.nix
     vim.g.clipboard = 'osc52'
 
     vim.deprecate = function() end  -- Silently ignore deprecation warnings
+
+    -- Base performance settings
+    vim.opt.lazyredraw = true
+    vim.lsp.set_log_level("ERROR")
 
     local function clear_gr_mappings(buf)
       local modes = { "n", "x" }
