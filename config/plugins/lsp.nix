@@ -12,14 +12,17 @@
       servers = {
         protols = {
           enable = true;
+          autostart = false;
           filetypes = [ "proto" ];
         };
         html = {
           enable = true;
+          autostart = false;
           filetypes = [ "html" ];
         };
         cssls = {
           enable = true;
+          autostart = false;
           filetypes = [
             "css"
             "less"
@@ -27,11 +30,17 @@
           ];
         };
         java_language_server = {
-          enable = true;
+          enable = false;
           filetypes = [ "java" ];
         };
-        bashls.enable = true;
-        yamlls.enable = true;
+        bashls = {
+          enable = true;
+          autostart = false;
+        };
+        yamlls = {
+          enable = true;
+          autostart = false;
+        };
       };
 
       keymaps = {

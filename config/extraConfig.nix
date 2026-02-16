@@ -12,6 +12,10 @@
 
     vim.deprecate = function() end  -- Silently ignore deprecation warnings
 
+    -- macOS-specific optimizations for performance
+    vim.opt.lazyredraw = true
+    vim.lsp.set_log_level("ERROR")
+
     local function clear_gr_mappings(buf)
       local modes = { "n", "x" }
       local keys  = { "gri", "grr", "gra", "grn" }

@@ -39,53 +39,19 @@
           priority = 100;
         }
         {
-          name = "nvim_lsp_signature_help";
-          priority = 100;
-        }
-        {
-          name = "nvim_lsp_document_symbol";
-          priority = 100;
-        }
-        {
-          name = "treesitter";
-          priority = 80;
-        }
-        {
           name = "luasnip";
           priority = 70;
         }
         {
           name = "buffer";
           priority = 50;
-          # Words from other open buffers can also be suggested.
-          option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
+          option.get_bufnrs.__raw = "function() return {vim.api.nvim_get_current_buf()} end";
           keywordLength = 3;
         }
         {
           name = "path";
           priority = 30;
         }
-        {
-          name = "git";
-          priority = 20;
-        }
-        {
-          name = "npm";
-          priority = 20;
-        }
-        {
-          name = "zsh";
-          priority = 20;
-        }
-        {
-          name = "calc";
-          priority = 10;
-        }
-        {
-          name = "emoji";
-          priority = 5;
-        }
-
       ];
 
       window = {
