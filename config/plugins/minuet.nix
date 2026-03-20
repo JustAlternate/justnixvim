@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  extraPlugins = [ pkgs.vimPlugins.minuet-ai-nvim ];
+  extraPlugins = [ pkgs.unstable.vimPlugins.minuet-ai-nvim ];
   extraConfigLua = ''
     local is_mac = vim.loop.os_uname().sysname == "Darwin"
 
@@ -13,7 +13,7 @@
 
     require('minuet').setup {
         provider = 'openai_compatible',
-        context_window = 5000,
+        context_window = 16000,
         context_ratio = 0.75,
         request_timeout = 2,
         throttle = 500,
@@ -24,9 +24,9 @@
                 stream = true,
                 end_point = 'https://openrouter.ai/api/v1/chat/completions',
                 api_key = 'OPENROUTER_API_KEY',
-                model = 'openai/gpt-oss-safeguard-20b',
+                model = 'mistralai/codestral-2508',
                 optional = {
-                    max_tokens = 1200,
+                    max_tokens = 4200,
                     top_p = 0.9,
                 },
             },

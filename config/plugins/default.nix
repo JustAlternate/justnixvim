@@ -11,28 +11,27 @@
     ./lang
     ./lsp.nix
     ./lspkind.nix
-    # ./lspsaga.nix  # Disabled - heavy LSP UI
+    # ./lspsaga.nix
     ./lualine.nix
     ./luasnip.nix
     ./mini.nix
-    # ./minuet.nix  # Disabled - AI completion
+    ./minuet.nix
     # ./noice.nix  # Disabled - UI overhaul causes lag
     ./notify.nix
     ./tree.nix
     ./treesitter.nix
-    # ./treesitter/treesitter-textobjects.nix
-    # ./trouble.nix  # Disabled - heavy diagnostics
-    # ./ufo.nix  # Disabled - folding can cause lag
+    # ./trouble.nix
+    # ./ufo.nix
     # ./wrapping.nix
     ./whichkey.nix
   ];
 
   plugins = {
-    # neoscroll.enable = true;  # Disabled - smooth scrolling causes lag
+    # neoscroll.enable = true;
     todo-comments.enable = true;
     web-devicons.enable = true;
     lazygit.enable = true;
-    # showkeys.enable = true;  # Disabled - runs on every keystroke
+    # showkeys.enable = true;
     # showkeys.settings = {
     #   maxkeys = 3;
     #   position = "bottom-right";
