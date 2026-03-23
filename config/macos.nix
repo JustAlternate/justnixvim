@@ -1,54 +1,37 @@
 # macOS-specific optimizations for Nixvim on nix-darwin
 # Addresses performance issues with APFS, Jamf Protect, and Ghostty
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   # Only apply on macOS
   config = lib.mkIf pkgs.stdenv.isDarwin {
-    # ============================================
-    # CLIPBOARD: Use native pbcopy/pbpaste instead of OSC52
-    # OSC52 causes input lag in Ghostty on macOS
-    # ============================================
-    extraConfigLua = ''
-      vim.g.clipboard = {
-        name = 'macOS-clipboard',
-        copy = {
-          ['+'] = {'pbcopy'},
-          ['*'] = {'pbcopy'},
-        },
-        paste = {
-          ['+'] = {'pbpaste'},
-          ['*'] = {'pbpaste'},
-        },
-        cache_enabled = 1,
-      }
-    '';
-
-    # ============================================
     # APFS OPTIMIZATIONS: Reduce disk I/O
     # APFS is crash-safe, no need for frequent fsync
-    # Using mkForce to override values in default.nix
-    # ============================================
     opts = {
+      # CLIPBOARD: Use unnamedplus for native macOS clipboard integration
+      clipboard = lib.mkForce "unnamedplus";
       # Disable swap/backup to reduce APFS writes
       swapfile = lib.mkForce false;
       backup = lib.mkForce false;
       writebackup = lib.mkForce false;
 
       # Faster UI response
-      updatetime = lib.mkForce 200;        # Default is 4000ms
-      timeoutlen = lib.mkForce 300;        # Faster than default 500ms
-      ttimeoutlen = lib.mkForce 10;      # Fast keycode timeout
+      updatetime = lib.mkForce 200; # Default is 4000ms
+      timeoutlen = lib.mkForce 300; # Faster than default 500ms
+      ttimeoutlen = lib.mkForce 10; # Fast keycode timeout
 
       # Performance
-      synmaxcol = lib.mkForce 240;         # Limit syntax on long lines
-      lazyredraw = lib.mkForce true;       # Reduce redraw frequency
-      ttyfast = lib.mkForce true;          # Fast terminal output
+      synmaxcol = lib.mkForce 240; # Limit syntax on long lines
+      lazyredraw = lib.mkForce true; # Reduce redraw frequency
+      ttyfast = lib.mkForce true; # Fast terminal output
     };
 
-    # ============================================
     # FILETYPE CACHING: Reduce /nix/store access
     # Prevents reloading filetype plugins on every buffer switch
-    # ============================================
     autoGroups = {
       macos_filetype_cache = { };
     };
@@ -74,21 +57,16 @@
       }
     ];
 
-    # ============================================
     # PLUGIN-SPECIFIC MACOS TUNING
-    # ============================================
     plugins = {
-      # Gitsigns: Increase debounce for APFS
       gitsigns = {
         settings = {
-          update_debounce = lib.mkForce 300;  # Override default 100ms
+          update_debounce = lib.mkForce 300;
         };
       };
     };
 
-    # ============================================
     # LSP: Reduce disk logging
-    # ============================================
     extraConfigLuaPost = ''
       vim.lsp.set_log_level("ERROR")
     '';
