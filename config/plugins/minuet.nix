@@ -24,7 +24,7 @@
                 stream = true,
                 end_point = 'https://openrouter.ai/api/v1/chat/completions',
                 api_key = 'OPENROUTER_API_KEY',
-                model = 'mistralai/codestral-2508',
+                model = 'mistralai/mistral-small-2603',
                 optional = {
                     max_tokens = 4200,
                     top_p = 0.9,
