@@ -26,10 +26,7 @@
       key = "K";
       action.__raw = ''
         function()
-          local winid = require("ufo").peekFoldedLinesUnderCursor()
-          if not winid then
-            vim.cmd("Lspsaga hover_doc")
-          end
+          vim.cmd("Lspsaga hover_doc")
         end
       '';
       options = {

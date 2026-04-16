@@ -11,17 +11,14 @@
     ./lang
     ./lsp.nix
     ./lspkind.nix
-    # ./lspsaga.nix
+    ./lspsaga.nix
     ./lualine.nix
     ./luasnip.nix
     ./mini.nix
     ./minuet.nix
-    # ./noice.nix  # Disabled - UI overhaul causes lag
     ./notify.nix
     ./tree.nix
     ./treesitter.nix
-    # ./trouble.nix
-    # ./ufo.nix
     # ./wrapping.nix
     ./whichkey.nix
   ];
@@ -31,12 +28,12 @@
     todo-comments.enable = true;
     web-devicons.enable = true;
     lazygit.enable = true;
-    # showkeys.enable = true;
-    # showkeys.settings = {
-    #   maxkeys = 3;
-    #   position = "bottom-right";
-    #   timeout = 5;
-    # };
+    showkeys.enable = true;
+    showkeys.settings = {
+      maxkeys = 3;
+      position = "bottom-right";
+      timeout = 5;
+    };
     telescope = {
       enable = true;
       settings = {
